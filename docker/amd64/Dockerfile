@@ -61,8 +61,7 @@ RUN cargo build --features ${DB} --release \
 
 # Copies the complete project
 # To avoid copying unneeded files, use .dockerignore
-RUN ls -l && \
-    whoami
+RUN find . -type l -exec readlink -f {} \;
     
 COPY . .
 
