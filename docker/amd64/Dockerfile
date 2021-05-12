@@ -61,7 +61,6 @@ RUN cargo build --features ${DB} --release \
 
 # Copies the complete project
 # To avoid copying unneeded files, use .dockerignore
-RUN chown -R root:docker .
 COPY . .
 
 # Make sure that we actually build the project
