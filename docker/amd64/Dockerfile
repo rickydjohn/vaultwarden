@@ -61,7 +61,7 @@ RUN cargo build --features ${DB} --release \
 
 # Copies the complete project
 # To avoid copying unneeded files, use .dockerignore
-COPY . .
+#COPY . .
 
 # Make sure that we actually build the project
 RUN touch src/main.rs
